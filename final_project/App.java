@@ -145,16 +145,13 @@ public class App {
 
         Composite composite = (Composite) component;
 
-        // Use iterator to safely remove while iterating
         for (int i = 0; i < composite.getChildren().size(); i++) {
             Component child = composite.getChildren().get(i);
 
-            // Only remove workers (Leaf nodes), not bosses
             if (child instanceof Leaf && ((Leaf) child).getName().equalsIgnoreCase(name)) {
                 composite.remove(child);
                 return true;
             } else if (child instanceof Composite) {
-                // Check if worker is in a sub-department
                 if (removePersonByName(child, name)) {
                     return true;
                 }
