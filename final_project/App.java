@@ -107,7 +107,7 @@ public class App {
         String personName = scanner.nextLine();
 
         if (!personName.matches("^[A-Z][a-z]+ [A-Z][a-z]+$")) {
-            System.out.println("ERROR: Invalid name. Please enter a valid name like John Smith.");
+            System.out.println("\nERROR: Invalid name. Please enter a valid name like John Smith.");
             System.out.println("");
             return;
         }
@@ -117,7 +117,7 @@ public class App {
             System.out.println("");
 
         } else {
-            System.out.println("ERROR: Person not found. Give it again.");
+            System.out.println("\nERROR: Person not found. Give it again.");
             System.out.println("");
         }
     }
